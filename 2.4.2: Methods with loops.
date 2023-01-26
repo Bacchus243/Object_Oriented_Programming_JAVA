@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ValuePrinter {
 
-   public static void printVal(int a, int b) {
+   public static void outputVal(int a, int b) {
       int product=-1;
       int lowerNum=-1;
       int higherNum=-1;
@@ -38,28 +38,31 @@ public class ValuePrinter {
       //System.out.println("Higher Num: " + higherNum);
       
       if(product==-1) {
-         product = 1;
-         while(lowerNum <= higherNum) {
+          product = 1;
+         // while(lowerNum <= higherNum) {
+         //    product = product * lowerNum;
+         //    //System.out.println(product);
+         //    lowerNum++;
+         
+         for(int i = lowerNum; i = higherNum; i++) {
             product = product * lowerNum;
-            //System.out.println(product);
-            lowerNum++;
          }
+      
       }
-      
-      //for(int i = lowerNum; i < higherNum + 1; i++) {
-      //   product = product * lowerNum;
-      //}
-      
       System.out.println(product);
+   }
+      
+     
+      
    }
 
    public static void main(String[] args) {
       Scanner scnr = new Scanner(System.in);
-      int num1;
-   	int num2;
+      int number1;
+   	int number2;
 
-   	num1 = scnr.nextInt();
-   	num2 = scnr.nextInt();
-      printVal(num1, num2);
+   	number1 = scnr.nextInt();
+   	number2 = scnr.nextInt();
+      outputVal(number1, number2);
    }
 }
