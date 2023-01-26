@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class ValuePrinter {
+
+   public static void printValue(int a, int b) {
+      int product;
+      int lowerNum;
+      int higherNum;
+      
+      
+      if(a<0 && b<0) {
+         
+         if(a<b) {
+            lowerNum = a;
+         }
+         else {
+            lowerNum = b;
+         }
+      }
+      
+      else if(a<0 && b>0) {
+         lowerNum = a;
+         higherNum = 0;
+      }
+      
+      else if(a>0 && b<0) {
+         lowerNum = b;
+         higherNum = 0;
+      }
+      
+      else {
+         product = 1;
+      }
+      
+      int i;
+      while(lowerNum != higherNum) {
+         product = product * lowerNum;
+         lowerNum++;
+      }
+      
+      System.out.println(product);
+   }
+
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      int input1;
+   	int input2;
+
+   	input1 = scnr.nextInt();
+   	input2 = scnr.nextInt();
+      printValue(input1, input2);
+   }
+}
