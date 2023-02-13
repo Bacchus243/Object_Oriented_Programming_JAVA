@@ -23,6 +23,7 @@ public class EmployeeRecords {
 
          // Add new employee entry
          if (userCommand.equals("a")) {
+        	 
             System.out.println("First Name: ");
             emplFirstName = scnr.next();
             System.out.println("Last Name: ");
@@ -34,6 +35,8 @@ public class EmployeeRecords {
             emplData = new EmployeeData(emplFirstName, emplLastName, emplID, deptNum);
             emplList.add(emplData);
          }
+         
+         
          // Print all entries
          else if (userCommand.equals("p")) {
 
@@ -49,6 +52,9 @@ public class EmployeeRecords {
             }
             System.out.println("");
          }
+         
+         
+         
       } while (!userCommand.equals("q"));
    }
 }
