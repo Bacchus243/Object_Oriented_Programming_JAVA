@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class LabProgram {
+   public static void main(String args[]){ 
+      Scanner scnr = new Scanner(System.in);
+      int credits;
+      int seed;
+      GVDie die1, die2;
+      die1 = new GVDie();
+      die2 = new GVDie();
+    
+      // Read random seed to support testing (do not alter)
+      seed = scnr.nextInt();
+      die1.setSeed(seed);
+    
+      // Read starting credits
+      credits = scnr.nextInt();
+      
+      die1.roll();
+      die2.roll();
+      
+      int val1 = die1.getValue();
+      int val2 = die2.getValue();
+      int sum = val1 + val2;
+      int goal;
+      boolean goalSet = false;
+      
+      if(sum == 7 || sum == 11) {
+         credits++;
+      }
+      else if(sum == 2 || sum == 3 || sum == 12) {
+         credits--;
+      }
+      else {
+         goal = sum;
+         goalSet = true;
+      }
+      
+      System.out.println("Dice total: " + sum);
+      System.out.println("Credits: " + credits);
+      
+      if(goalSet == true) {
+         
+         while(
+         
+      
+      
+   }
+}
+
+/* Step 2 (4 pts). 
+
+If player did not win or lose in step 1 (i.e. a goal was set), continue rolling 
+both dice until one of two outcomes: 1) player rolls a 7 and loses one credit or 2) player rolls the 
+goal value and wins one credit. Current round ends. Set goal to -1 and output credits. Submit for 
+grading to confirm 5 tests pass. */
