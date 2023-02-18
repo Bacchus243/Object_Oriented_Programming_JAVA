@@ -62,5 +62,16 @@ public class GenericMappingArrays {
 
       // FIXME: Add code similar to the integer processing to process
       //        a double and a string
+      
+      System.out.println("\nEnter a double value to map: ");
+      mapDouble = scnr.nextDouble();
+      mapDoubleResult = getMapping(mapDouble,mapDoubleMappings);
+      
+      absorbInput = scnr.nextLine();
+      System.out.println("\nEnter a string value to map: ");
+      mapString = scnr.nextLine();
+      mapStringResult = getMapping(mapString, mapStringMappings);
+      
+      
    } 
 }
