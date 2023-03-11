@@ -7,6 +7,7 @@ public class Main {
       Scanner scnr = new Scanner(System.in);
       ArrayList<Integer> listInts = new ArrayList<Integer>();
       // Hint: Declare listNegInts
+      ArrayList<Integer> listNegInts = new ArrayList<Integer>();
       int i;
       
       // Get input integers
@@ -14,6 +15,16 @@ public class Main {
          listInts.add(scnr.nextInt());
       }
       
-      /* Type your code here. */
-   }
+      for (i = 0; i < listInts.size(); ++i) {
+    	  if (listInts.get(i) < 0) {
+    		  listNegInts.add(listInts.get(i));
+    	  }
+      }
+      
+      System.out.println(listNegInts.size());
+      
+      for (i = 0; i < listNegInts.size(); ++i) {
+    	  System.out.println(listNegInts.get(i));
+      }
+    }
 }
