@@ -10,6 +10,7 @@ public class PlantArrayListExample {
       Scanner scnr = new Scanner(System.in);
       String input;
       // TODO: Declare an ArrayList called myGarden that can hold object of type plant
+      ArrayList<Flower> myGarden = new ArrayList<Flower>();
 
       // TODO: Declare variables - plantName, plantCost, flowerName, flowerCost, colorOfFlowers, isAnnual
       
@@ -18,7 +19,16 @@ public class PlantArrayListExample {
          // TODO: Check if input is a plant or flower
          //       Store as a plant object or flower object
          //       Add to the ArrayList myGarden
-      
+    	 
+    	 if (input == "plant") {
+    		 Plant input = new Plant();
+    	 }
+    	 
+    	 if (input == "flower") {
+    		 Flower input = new Flower();
+    	 }
+    	  
+    	  
          input = scnr.next();
       }
       
