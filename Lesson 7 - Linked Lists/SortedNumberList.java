@@ -9,12 +9,16 @@ public class SortedNumberList {
 	}
 
    // Optional: Add any desired private methods here
-   
+   private boolean is
    
 	// Inserts the number into the list in the correct position such that the
 	// list remains sorted in ascending order.
 	public void insert(double number) {
-	   // Your code here
+		// evaluate where the node should be placed in the list
+		
+		// create the new node with the parameter value 'number'
+		
+		// connect the node to its predecessor and successor nodes
 	}
 
 	// Removes the node with the specified number value from the list. Returns
