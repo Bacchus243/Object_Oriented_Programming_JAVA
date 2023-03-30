@@ -34,6 +34,6 @@ public class CourseInformation {
       System.out.println("   Location: " + myOfferedCourse.getLocation());
       System.out.println("   Class Time: " + myOfferedCourse.getClassTime());
       
-      scnr.close();	
+      scnr.close();
    }
 }
