@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class LabProgram {
+public class LabProgram4 {
    public static void main(String[] args) {
       Scanner scnr = new Scanner(System.in);
       final int ROCK = 0;
