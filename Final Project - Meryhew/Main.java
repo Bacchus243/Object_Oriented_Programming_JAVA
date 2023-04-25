@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
 
-	final static String author = "President Ronald Reagan"; // change this to your name/MEID
+	final static String author = "Trenton Meryhew / tre2020487"; // change this to your name/MEID
 
 	public static void main (String[] args) {
 

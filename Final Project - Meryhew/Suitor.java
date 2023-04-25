@@ -6,6 +6,8 @@ public class Suitor {
 
 		System.out.println("\n");
 		System.out.println("Select the suitor.");
+		System.out.println("Enter the number of Suitors: ");
+		
 
 	}
 }
