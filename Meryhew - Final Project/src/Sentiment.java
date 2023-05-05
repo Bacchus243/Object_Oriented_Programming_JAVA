@@ -163,8 +163,12 @@ public class Sentiment {
 				sentiment = "positive";
 			}
 			
-			if ((percentNeg - percentPos) >= 5) {
+			else if ((percentNeg - percentPos) >= 5) {
 				sentiment = "negative";
+			}
+			
+			else {
+				sentiment = "neutral";
 			}
 			
 			
@@ -180,10 +184,12 @@ public class Sentiment {
 			
 			System.out.print("Would you like to analyze another file Y/N? ");
 			doAgain = scnr.next();
+			doAgain = doAgain.toUpperCase();
 			
 		// Zero out variables
 			numPosWords = 0;
 			numNegWords = 0;
+			totalUserWords = 0;
 		}
 			
 		
