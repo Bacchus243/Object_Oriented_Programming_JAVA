@@ -25,57 +25,61 @@ public class SortedNumberList {
 
 		
 		// if no head exists, set Node as the head object in list
-		if (head == null) {
-			head = newNode;
-			tail = newNode;
-			missionComplete = true;
-		}
+
 		
-		
-		
-		while (missionComplete == false) {
-			// compare currNodeData to this data
-			
-			if (currNode.getData() >= newData) {
-				
-				if(currNode == head) {
-					head = newNode;
-					newNode.setNext(currNode);
-					currNode.setPrevious(newNode);
-					currNode.setNext(null);
-					tail = currNode;
-				}
-				
-			
-				else {
-					tempNode = currNode.getPrevious();
-					currNode.setPrevious(newNode);
-					newNode.setNext(currNode);
-					newNode.setPrevious(tempNode);
-					missionComplete = true;
-				}
-			}
-			
-			
-			else if (currNode.getData() < newData) {
-				
-				if (currNode.getNext() == null) {
-					currNode.setNext(newNode);
-					newNode.setPrevious(currNode);
-					tail = newNode;
-				}
-				else {
-					currNode = currNode.getNext();
-				}
-			}
-		}
 		
 
+		while (missionComplete == false) {
+			if (head == null) {		
+				// make Head and Tail == newNode
+				head = newNode;
+				tail = newNode;
+				missionComplete = true;
+			}
+			
+			else {
+				if (newData <= currNode.getData()) {
+					if (currNode == head) {
+						// make newNode the Head node in list, set missionComplete = true
+						head = newNode;
+						newNode.setNext(currNode);
+						currNode.setPrevious(newNode);
+						missionComplete = true;
+					}
+					else {
+						// put newNode in front of currNode, set missionComplete = true
+						tempNode = currNode.getPrevious();
+						tempNode.setNext(newNode);
+						newNode.setPrevious(tempNode);
+						newNode.setNext(currNode);
+						currNode.setPrevious(newNode);
+						missionComplete = true;						
+					}
+				}
+				
+				else {	//if (newData > currNode.getData()) 
+					if (currNode == tail) {
+						// make newNode == tail, set missionComplete = true
+						currNode.setNext(newNode);
+						newNode.setPrevious(currNode);
+						newNode = tail;
+						missionComplete = true;
+						
+					}
+					else {
+						//update currNode and start over again
+						currNode = currNode.getNext();
+						
+					}
+				}
+			}
+			
+			
+		}
+		
 	}
 
-	// Removes the node with the specified number value 
-	// from the list. Returns true if the node is found 
-	// and removed, false otherwise.
+	// Removes the node with the specified number value from the list. Returns true if the node is found and removed, false otherwise.
 	public boolean remove(double number) {
 	   // Your code here
 	   
